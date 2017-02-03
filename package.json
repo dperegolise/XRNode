@@ -1,0 +1,26 @@
+{
+  "name": "xrnode",
+  "version": "1.0.0",
+  "description": "XR Node server",
+  "main": "index.js",
+  "scripts": {
+    "test": "na"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dperegolise/XRNode.git"
+  },
+  "keywords": [
+    "XRNode"
+  ],
+  "author": "XR Dev Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dperegolise/XRNode/issues"
+  },
+  "homepage": "https://github.com/dperegolise/XRNode#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "mongodb": "^2.2.22"
+  }
+}
