@@ -21,6 +21,8 @@
   "homepage": "https://github.com/dperegolise/XRNode#readme",
   "dependencies": {
     "express": "^4.14.1",
-    "mongodb": "^2.2.22"
+    "lodash": "^4.17.4",
+    "mysql": "^2.13.0",
+    "orm": "^3.2.3"
   }
 }
