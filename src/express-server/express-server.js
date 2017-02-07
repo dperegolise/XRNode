@@ -21,7 +21,7 @@ app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
 });
 ;
-app.get('/api/posts', function (req, res) {
+app.get('/posts', function (req, res) {
 	req.models.discussion.find({Announce: 2}, 'DateInserted').each().get(function(posts) {
 		// Have to do this ugly workaround because node-orm doesn't supoprt
 		// custom foreign keys (Discussion.InsertUserID != User.UserID)
