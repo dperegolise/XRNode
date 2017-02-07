@@ -9,8 +9,8 @@ app.use(orm.express("mysql://root:root@localhost/dev_xr_forum", {
         db.load("./models", function (err) {
         	if (err) throw err;
 		    // loaded!
-		    models.user = db.models.gdn_user;
-		    models.discussion = db.models.gdn_discussion;
+		    models.user = db.models.GDN_User;
+		    models.discussion = db.models.GDN_Discussion;
 		});
 
         next();
@@ -22,7 +22,7 @@ app.listen(3000, function () {
 });
 ;
 app.get('/api/posts', function (req, res) {
-	req.models.discussion.find({Announce: 2}).each().get(function(posts) {
+	req.models.discussion.find({Announce: 2}, 'DateInserted').each().get(function(posts) {
 		// Have to do this ugly workaround because node-orm doesn't supoprt
 		// custom foreign keys (Discussion.InsertUserID != User.UserID)
 		req.models.user.find().each(function(user) {
