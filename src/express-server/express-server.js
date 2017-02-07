@@ -7,6 +7,7 @@ app.use(orm.express("mysql://root:root@localhost/dev_xr_forum", {
     define: function (db, models, next) {
     	db.settings.set("properties.association_key", "{field}");
         db.load("./models", function (err) {
+        	if (err) throw err;
 		    // loaded!
 		    models.user = db.models.gdn_user;
 		    models.discussion = db.models.gdn_discussion;
